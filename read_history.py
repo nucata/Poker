@@ -9,9 +9,9 @@ class ReadHistory(object):
         with open('History/win_register.txt', 'r') as file:
             seq = file.read().split()
             for i in seq:
-                bbs_win += int(i)
+                bbs_win += float(i)
             for i in seq:
-                bbsW_record.append(int(i))
+                bbsW_record.append(float(i))
         return [bbs_win, bbsW_record]
 
     def bbsL(self):
@@ -20,9 +20,9 @@ class ReadHistory(object):
         with open('History/lose_register.txt', 'r') as file:
             seq = file.read().split()
             for i in seq:
-                bbs_lose += int(i)
+                bbs_lose += float(i)
             for i in seq:
-                bbsL_record.append(int(i))
+                bbsL_record.append(float(i))
         return [bbs_lose, bbsL_record]
 
     def totalHands(self):
@@ -41,5 +41,5 @@ class ReadHistory(object):
         with open('History/hands_per_day.txt', 'r') as file:
             seq = file.read().split()
             for i in seq:
-                record.append(int(i))
+                record.append(float(i))
         return record
